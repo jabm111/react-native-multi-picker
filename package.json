@@ -1,0 +1,25 @@
+{
+  "name": "react-native-multi-picker",
+  "version": "0.0.1",
+  "description": "A wrapper around React Native's Picker component that renders multiple pickers",
+  "main": "RNMultiPicker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jabm111/react-native-multi-picker.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "picker",
+    "javascript"
+  ],
+  "author": "James Morton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jabm111/react-native-multi-picker/issues"
+  },
+  "homepage": "https://github.com/jabm111/react-native-multi-picker#readme"
+}
