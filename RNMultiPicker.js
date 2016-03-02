@@ -118,11 +118,10 @@ export default class CustomPicker extends Component {
     renderListTitle(optionList) {
         if (optionList.title) {
             return (
-                <View
-                    style={styles.listTitleWrapper}
-                >
+                <View style={styles.listTitleWrapper}>
                     <Text
                         style={[styles.listTitle, this.getOptionalStyle('listTitle')]}
+                        allowFontScaling={this.props.allowFontScaling}
                     >
                         {optionList.title}
                     </Text>
@@ -162,11 +161,10 @@ export default class CustomPicker extends Component {
     renderPrompt() {
         if (this.props.prompt) {
             return (
-                <View
-                    style={styles.promptWrapper}
-                >
+                <View style={styles.promptWrapper}>
                     <Text
-                        style={[styles.prompt, this.getOptionalStyle('promp')]}
+                        style={[styles.prompt, this.getOptionalStyle('prompt')]}
+                        allowFontScaling={this.props.allowFontScaling}
                     >
                         {this.props.prompt}
                     </Text>
@@ -204,7 +202,7 @@ export default class CustomPicker extends Component {
                                 onPress={this.props.onCancel}
                                 underlayColor={'lightgray'}
                             >
-                                <Text style={styles.buttonText}>{this.props.cancelText}</Text>
+                                <Text allowFontScaling={this.props.allowFontScaling} style={styles.buttonText}>{this.props.cancelText}</Text>
                             </TouchableHighlight>
                         </View>
                         <View style={styles.buttonWrapper}>
@@ -213,7 +211,7 @@ export default class CustomPicker extends Component {
                                 style={[styles.button, styles.done, this.getOptionalStyle('done')]}
                                 underlayColor={'lightgray'}
                             >
-                                <Text style={styles.buttonText}>{this.props.doneText}</Text>
+                                <Text allowFontScaling={this.props.allowFontScaling} style={styles.buttonText}>{this.props.doneText}</Text>
                             </TouchableHighlight>
                         </View>
                     </View>
@@ -287,7 +285,8 @@ CustomPicker.propTypes = {
      * borderWidth
      *     Border width of the modal
      */
-    borderWidth: React.PropTypes.number
+    borderWidth: React.PropTypes.number,
+    allowFontScaling: React.PropTypes.bool
 };
 
 CustomPicker.defaultProps = {
@@ -296,7 +295,8 @@ CustomPicker.defaultProps = {
     padding: 10,
     borderWidth: 1,
     itemStyle: {},
-    style: {}
+    style: {},
+    allowFontScaling: true
 };
 
 const styles = StyleSheet.create({
