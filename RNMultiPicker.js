@@ -72,7 +72,7 @@ export default class CustomPicker extends Component {
         const max = ASC ? parseInt(bound2) : parseInt(bound1);
         let options = [];
 
-        for (i = min; i <= max; i++) {
+        for (let i = min; i <= max; i++) {
             options.push({
                 label: String(i),
                 value: i
